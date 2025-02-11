@@ -1,0 +1,25 @@
+from flask import Flask, jsonify, render_template
+import pandas as pd
+
+app = Flask(__name__)
+
+# Route to serve player data
+@app.route('/api/players', methods=['GET'])
+def get_players():
+    # Replace with your actual cleaned dataset
+    data = pd.read_csv('players_data.csv')  # Ensure the file exists
+    return jsonify(data.to_dict(orient='records'))
+
+# Route to serve the frontend
+@app.route('/')
+def index():
+    return render_template('index.html')
+
+if __name__ == '__main__':
+    app.run(debug=True)
+
+
+and then run flash app( python app.py)
+
+
+at last run in http://127.0.0.1:5000

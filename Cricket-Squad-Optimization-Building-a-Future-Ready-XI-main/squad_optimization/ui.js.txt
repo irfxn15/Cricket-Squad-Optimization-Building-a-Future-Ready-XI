@@ -1,0 +1,24 @@
+// Fetch player data from the Python backend
+fetch('/api/players')
+    .then(response => response.json())
+    .then(data => {
+        const tableBody = document.querySelector('tbody');
+
+        // Populate the table with player data
+        data.forEach(player => {
+            const row = `
+                <tr>
+                    <td>${player.Name}</td>
+                    <td>${player.Team}</td>
+                    <td>${player.BattingStyle}</td>
+                    <td>${player.InningsBatted}</td>
+                    <td>${player.Runs}</td>
+                    <td>${player.BallsFaced}</td>
+                    <td>${player.StrikeRate}</td>
+                    <td>${player.BattingAvg}</td>
+                    <td>${player.BoundaryPercentage}</td>
+                </tr>`;
+            tableBody.innerHTML += row;
+        });
+    })
+    .catch(err => console.error('Error fetching player data:', err));

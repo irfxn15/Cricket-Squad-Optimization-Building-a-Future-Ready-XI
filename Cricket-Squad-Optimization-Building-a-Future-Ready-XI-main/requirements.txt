@@ -1,0 +1,3 @@
+Flask
+pandas  # Example for data handling if required for your app
+requests  # Example if you're using HTTP requests

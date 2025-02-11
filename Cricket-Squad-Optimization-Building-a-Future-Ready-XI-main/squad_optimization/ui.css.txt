@@ -1,0 +1,62 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #004d99;
+    color: white;
+}
+
+/* Main Content */
+main {
+    margin: 20px 0;
+}
+
+/* Player Data Section */
+.player-data {
+    margin-bottom: 40px;
+}
+
+.player-data table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.player-data th, .player-data td {
+    text-align: left;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.player-data th {
+    background-color: #004d99;
+    color: white;
+}
+
+/* Power BI Section */
+.power-bi iframe {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #004d99;
+    color: white;
+    margin-top: 20px;
+}
